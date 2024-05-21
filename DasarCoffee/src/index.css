@@ -1,0 +1,197 @@
+/* General reset and styling */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background-color: #ede9ea;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+header .header-background {
+  position: relative;
+}
+
+header .header-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("background.jpg");
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}
+
+header .overlay {
+  height: auto;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: url("background.jpg");
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+h3,
+p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Navigation styles */
+.nav-container {
+  background-color: #ede9ea; /* Light background color */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #ede9ea;
+  max-width: 150px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nav-menu {
+  flex-basis: 8;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: #ede9ea;
+  justify-content: center;
+}
+
+.nav-menu ul li {
+  margin: 0 15px;
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+
+.nav-menu ul li:hover {
+  border-bottom: 2px black solid;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 25px;
+  display: block;
+}
+
+.nav-menu ul li a:hover {
+  color: #6f4e37; /* Coffee-themed hover color */
+}
+
+.menu-toggle {
+  display: none;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #ede9ea;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav-menu ul li {
+    margin: 20px 15px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    color: black;
+  }
+
+  .nav-menu ul li:hover {
+    border-top: 2px black solid;
+  }
+
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+  }
+
+  .nav-menu ul li a:hover {
+    color: #6f4e37; /* Coffee-themed hover color */
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-menu.show ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #333;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,37 @@
+.bottom-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bottom-header-image {
+  width: 50%;
+  max-width: 600px; /* Optionally add a max-width for larger screens */
+  margin-right: 20px; /* Add some space between image and text */
+}
+
+.bottom-header-text {
+  color: brown;
+  font-size: 29px;
+  text-align: justify;
+  max-width: 600px;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .bottom-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-header-image {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .bottom-header-text {
+    font-size: 24px;
+  }
+}

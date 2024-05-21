@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grenze+Gotisch:wght@100..900&family=Kablammo&family=Sansita+Swashed:wght@300..900&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: #ede9ea;
+  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  text-align: center;
+}
+
+body {
+  background-color: #ede9ea;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

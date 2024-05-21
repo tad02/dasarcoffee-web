@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kablammo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grenze+Gotisch:wght@100..900&family=Kablammo&display=swap");
+
+html {
+  position: relative;
+  overflow-x: hidden !important;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 110vh;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fa9b48 100%
+  );
+}
+
+.scroll-list {
+  width: 100%;
+  max-width: 700px;
+  padding: 25px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll-list__wrp {
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+  padding: 50px;
+  box-shadow: 0px 7px 46px 0px rgba(41, 53, 108, 0.45);
+  background: #4b1079;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(147deg, #6e0777 0%, #380c70 74%);
+}
+
+.scroll-list__item,
+.scroll-list__item_food {
+  width: 100%;
+  height: 155px;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(147deg, #ff7c34 0%, #c31269 74%);
+  transition: all 0.35s ease-in-out;
+  opacity: 0;
+  transform: scale(0.7);
+  box-shadow: 0px 7px 16px 0px rgba(41, 53, 108, 0.25);
+}
+
+.scroll-list__item.item-hide {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.scroll-list__item.item-focus {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-list__item.item-next {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.imageOrder {
+  max-width: 10.5rem;
+  position: absolute;
+  right: 0;
+}
+
+.nameOrder {
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  font-family: "Grenze Gotisch", cursive;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .imageOrder {
+    max-width: 10rem;
+  }
+
+  .nameOrder {
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    font-family: "Sansita Swashed", cursive;
+    font-weight: 100;
+    font-style: italic;
+  }
+}
