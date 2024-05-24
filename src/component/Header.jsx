@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '/dasar.jpg';
 import '../index.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
         <nav className={`nav-menu ${menuOpen ? '' : ''}`}>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><Link to={`menu-dasar-coffee`}>Menu</Link></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -31,7 +32,7 @@ const Header = () => {
       <nav className={`nav-menu ${menuOpen ? 'show' : ''}`}>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><Link to={`menu-dasar-coffee`}>Menu</Link></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

@@ -1,7 +1,9 @@
 import './App.css';
+import Footer from './component/Footer';
 import Header from './component/Header';
 import BottomHeader from './component/bottomHeader';
 import ScrollList from './component/scrollList';
+import SocialMediaLink from './component/socialMediaLink';
 
 const App = () => {
  
@@ -10,7 +12,8 @@ const App = () => {
     <>
       <Header/>
       <BottomHeader/>
-      <ScrollList/>
+      <SocialMediaLink/>
+      <Footer/>
     </>
   );
 };

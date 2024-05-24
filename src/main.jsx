@@ -2,9 +2,24 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ScrollList from './component/scrollList.jsx';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+  {
+    path: "/menu-dasar-coffee",
+    element: <ScrollList/>,
+  },
+  
+]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -1,0 +1,16 @@
+.footer{
+    background-image: url("dasarcf.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; 
+}
+
+
+@media (max-width: 768px){
+    .footer {
+        background-size: contain;
+        min-height: 500px;
+    }
+    
+}

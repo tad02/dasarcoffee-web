@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            background-color: #f5f5dc; /* Light beige background for a vintage feel */
+            color: #4b2e1e; /* Dark brown text color */
+        }
+
+        .containMedia {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .imageLink {
+            background-image: url("dasar1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%; 
+            height: 90vh;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .containMedia p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .iconLink {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .iconLink a {
+            color: #4b2e1e; /* Dark brown color for icons */
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .iconLink a:hover {
+            color: #d2691e; /* Lighter brown color on hover */
+        }
+
+        @media (max-width: 768px) {
+            .imageLink {
+                background-size: contain;
+                height: 50vh;
+            }
+
+            .containMedia p {
+                font-size: 1.5rem;
+            }
+
+            .iconLink a {
+                font-size: 1.5rem;
+            }
+        }
