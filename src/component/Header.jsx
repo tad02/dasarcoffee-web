@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '/dasar.jpg';
 import '../index.css'
 import { Link } from 'react-router-dom';
+import BackgroundHeader from './bgHeader';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,15 +39,7 @@ const Header = () => {
           </ul>
         </nav>:''
       }
-      <div className="header-background">
-        <div className="overlay">
-          <h1>Dasar Coffee</h1>
-          <h3>Reasons for Choosing Us</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.</p>
-          <br />
-          <button>READ MORE</button>
-        </div>
-      </div>
+      <BackgroundHeader/>
 
     </header>
 

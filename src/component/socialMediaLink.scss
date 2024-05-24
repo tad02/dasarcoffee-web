@@ -17,7 +17,7 @@
         }
 
         .imageLink {
-            background-image: url("dasar1.jpg");
+            background-image: url("/dasar1.jpg"); /* Đường dẫn bắt đầu từ gốc của thư mục public */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -27,7 +27,6 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         .containMedia p {
             font-family: 'Dancing Script', cursive;
             font-size: 2rem;

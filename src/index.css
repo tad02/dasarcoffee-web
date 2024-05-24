@@ -1,6 +1,4 @@
-/* General reset and styling */
-
-:root {
+General reset and styling :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -33,7 +31,7 @@ header {
 }
 
 header .header-background {
-  position: relative;
+  position: absolute;
 }
 
 header .header-background::before {
@@ -51,11 +49,11 @@ header .header-background::before {
 }
 
 header .overlay {
+  position: relative;
   height: auto;
   padding: 20px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
-  background-image: url("background.jpg");
 }
 
 h1 {
