@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss'
-import imgFooter from '/dasarcf.png';
+import imgFooter from '/testimg.jpg';
 
 function Footer() {
     return ( 

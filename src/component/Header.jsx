@@ -3,6 +3,7 @@ import logo from '/dasar.jpg';
 import '../index.css'
 import { Link } from 'react-router-dom';
 import BackgroundHeader from './bgHeader';
+import Slideshow from './sliderImage';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ const Header = () => {
           </ul>
         </nav>:''
       }
+      <Slideshow/>
       <BackgroundHeader/>
 
     </header>

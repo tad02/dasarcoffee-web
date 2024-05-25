@@ -14,7 +14,8 @@ a:hover {
 
 .wrapper {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 110vh;
   background-image: linear-gradient(
@@ -79,24 +80,30 @@ a:hover {
 .scroll-list__item.item-next {
   opacity: 1;
   transform: scale(1);
+  height: 300px;
+  width: 100%;
 }
 
 .imageOrder {
-  max-height: 220px;
+  max-width: 10em;
 }
 
 .nameOrder {
   font-size: 50px;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
   font-family: "Grenze Gotisch", cursive;
   font-weight: 100;
   font-style: italic;
+  color: white;
 }
 
 .typeOrderName {
+  font-family: "Grenze Gotisch", cursive;
+
   font-size: 50px;
+  color: white;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -134,7 +141,8 @@ a:hover {
   transform: rotateY(180deg);
 }
 
-.scroll-list__item-front, .scroll-list__item-back {
+.scroll-list__item-front,
+.scroll-list__item-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -143,4 +151,16 @@ a:hover {
 
 .scroll-list__item-back {
   transform: rotateY(180deg);
+}
+
+/* Description styles */
+.descriptionItem {
+  font-size: 25px; /* Adjust font size */
+  color: aliceblue; /* Gray text color for description */
+}
+
+/* Price styles */
+.priceItem {
+  font-size: 25px; /* Adjust font size */
+  color: antiquewhite; /* Dark gray text color for price */
 }

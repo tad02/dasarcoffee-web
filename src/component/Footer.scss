@@ -1,16 +1,17 @@
-.footer {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Hiển thị hình ảnh mà không làm biến dạng nó, và lấp đầy phần tử cha */
-    min-height: 90vh; /* Đảm bảo độ cao tối thiểu */
+.footer{
     background-image: url("dasarcf.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 90vh; 
+    width: 100%;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 768px){
     .footer {
-        background-size: contain; /* Thay đổi kích thước để hình ảnh hiển thị toàn bộ */
+        background-size: contain;
         min-height: 30vh;
     }
+    
 }

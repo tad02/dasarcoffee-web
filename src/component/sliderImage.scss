@@ -1,0 +1,103 @@
+/* Container của slideshow */
+.slide-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Mỗi slide */
+  .each-fade {
+    position: relative;
+  }
+  
+  /* Hình ảnh trong slide */
+  .each-fade img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Caption cho slide */
+  .each-fade h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Tùy chỉnh nút điều hướng */
+  .react-slideshow-container + div.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .react-slideshow-container + div.indicators div {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .react-slideshow-container + div.indicators div.active {
+    background-color: #6f4e37; /* Màu nâu cà phê */
+  }
+  
+  .react-slideshow-container .default-nav {
+    display: block; /* Ẩn nút điều hướng mặc định nếu không muốn sử dụng */
+  }
+
+  .slide-container {
+    position: relative;
+  }
+  
+  .each-fade {
+    position: relative;
+  }
+  
+  .each-fade img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .each-fade h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Custom navigation button styles */
+  .slide-container .nav.default-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .slide-container .nav.default-nav svg {
+    width: 24px;
+    height: 24px;
+    fill: #6f4e37; /* Màu của nút */
+  }
+  
+  .slide-container .nav.default-nav:hover {
+    color: #000; /* Màu khi hover */
+  }
+  

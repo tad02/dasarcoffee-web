@@ -32,6 +32,8 @@ header {
 
 header .header-background {
   position: absolute;
+  right: 0;
+  left: 0;
 }
 
 header .header-background::before {
