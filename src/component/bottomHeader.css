@@ -3,23 +3,22 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin: 20px;
 }
 
 .bottom-header-image {
-  width: 50%;
   max-width: 600px; /* Optionally add a max-width for larger screens */
-  margin-right: 20px; /* Add some space between image and text */
 }
 
 .bottom-header-text {
-  color: brown;
+  color: #483434;
   font-size: 29px;
   text-align: justify;
   max-width: 600px;
   margin: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .bottom-header {
     flex-direction: column;
     text-align: center;

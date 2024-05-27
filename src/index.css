@@ -1,27 +1,20 @@
-General reset and styling :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "bootstrap/dist/css/bootstrap.min.css";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
   background-color: #ede9ea;
+  background-image: none;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grenze+Gotisch:wght@100..900&family=Kablammo&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita+Swashed:wght@300..900&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap");
 header {
   text-align: center;
   width: 100%;
@@ -90,7 +83,7 @@ button:hover {
   background-color: #ede9ea; /* Light background color */
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -141,8 +134,8 @@ button:hover {
 }
 
 .menu-toggle {
+  position: absolute;
   display: none;
-  flex-grow: 1;
 }
 
 @media (max-width: 768px) {
@@ -189,9 +182,22 @@ button:hover {
   }
 
   .menu-toggle {
+    position: absolute;
+    right: 50px;
     display: block;
     cursor: pointer;
     color: #333;
-    font-size: 24px;
+    font-size: 30px;
   }
+}
+
+code .nav-menu-sub {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-menu-sub.show {
+  transform: translateY(0);
+  opacity: 1;
 }
