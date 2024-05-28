@@ -75,12 +75,10 @@
 .each-fade h5 {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
-  border-radius: 5px;
+  font-size: 2rem;
 }
 
 /* Custom navigation button styles */
@@ -104,16 +102,14 @@
   color: #000; /* Màu khi hover */
 }
 
-@media (max-height: 786px) {
-  .each-fade h5 {
-    font-size: 20px;
+@media (max-height: 1000px) {
+  .each-fade > h5 {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
+    font-size: 1.2rem;
   }
 }

@@ -9,6 +9,7 @@
 
 .overlay {
   position: absolute;
+  padding: 2vw;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,6 +21,7 @@
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5); /* Màu nền overlay với độ mờ */
+  font-size: 1rem;
 }
 
 .overlay h1,

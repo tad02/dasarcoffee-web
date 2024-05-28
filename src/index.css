@@ -191,13 +191,59 @@ button:hover {
   }
 }
 
-code .nav-menu-sub {
-  transform: translateY(-100%);
+/* Add this CSS to your existing stylesheet */
+.nav-menu-sub {
+  display: none; /* Hidden by default */
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-20px);
 }
 
 .nav-menu-sub.show {
-  transform: translateY(0);
+  display: block; /* Show the menu */
   opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav-menu-sub {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    animation-name: example;
+    animation-duration: 0.3s;
+  }
+
+  .nav-menu-sub.show {
+    max-height: 500px; /* Adjust based on your content's height */
+
+    display: block;
+    opacity: 1;
+  }
+
+  @keyframes example {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-menu.show ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 50px;
+    display: block;
+    cursor: pointer;
+    color: #333;
+    font-size: 30px;
+  }
 }
