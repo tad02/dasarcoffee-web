@@ -55,7 +55,7 @@ const Header = () => {
               <a href="#home">Home</a>
             </li>
             <li>
-              <Link to={`menu-dasar-coffee`}>Menu</Link>
+              <Link to="/menu-dasar-coffee">Menu</Link>
             </li>
             <li>
               <a href="#about">About Us</a>
