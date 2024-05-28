@@ -37,8 +37,7 @@ const Header = () => {
               <Link to={"/"}>Trang chủ</Link>
             </li>
             <li>
-              {/* <Link to={`/menu-dasar-coffee`}>Menu</Link> */}
-              <a href="/menu-dasar-coffee">Menu</a>
+              <Link to={`/menu-dasar-coffee`}>Menu</Link>
             </li>
             <li>
               <a href="#about">About Us</a>
