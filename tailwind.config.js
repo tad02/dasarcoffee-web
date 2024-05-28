@@ -4,8 +4,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [react()],
-  server: {
-    historyApiFallback: true,
-  },
-};
+  plugins: [],
+}
