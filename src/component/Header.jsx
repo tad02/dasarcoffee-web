@@ -52,7 +52,7 @@ const Header = () => {
         <nav className={`nav-menu nav-menu-sub ${menuOpen ? "show" : ""}`}>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to={"/"}></Link>
             </li>
             <li>
               <Link to="/menu-dasar-coffee">Menu</Link>
