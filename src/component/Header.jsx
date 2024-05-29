@@ -31,7 +31,7 @@ const Header = () => {
         >
           &#9776; {/* This is a hamburger icon */}
         </div>
-        <nav className={`nav-menu ${menuOpen ? "" : ""}`}>
+        <nav className={`nav-menu`}>
           <ul>
             <li>
               <Link to={"/"}>Trang chủ</Link>
@@ -52,7 +52,7 @@ const Header = () => {
         <nav className={`nav-menu nav-menu-sub ${menuOpen ? "show" : ""}`}>
           <ul>
             <li>
-              <Link to={"/"}></Link>
+              <Link to="/"></Link>
             </li>
             <li>
               <Link to="/menu-dasar-coffee">Menu</Link>
