@@ -52,16 +52,16 @@ const Header = () => {
         <nav className={`nav-menu nav-menu-sub ${menuOpen ? "show" : ""}`}>
           <ul>
             <li>
-              <Link to="/"></Link>
+              <Link to="/">Trang chủ</Link>
             </li>
             <li>
-              <Link to="/menu-dasar-coffee">Menu</Link>
+              <Link to="/menu-dasar-coffee">Thực đơn</Link>
             </li>
             <li>
-              <a href="#about">About Us</a>
+              <a href="#about">Giới thiệu</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact">Liên hệ</a>
             </li>
           </ul>
         </nav>
