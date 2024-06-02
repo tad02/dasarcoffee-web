@@ -12,17 +12,83 @@ Scrollbar.use(OverscrollPlugin);
 const ScrollList = () => {
   const itemsJuice = [
     {
+      name: "Ổi",
+      engName: "Guava",
+      image: "smoothie/guava.png",
+      price: "25.000",
+      description: "",
+    },
+    {
+      name: "Cà rốt",
+      engName: "Carrot",
+      image: "smoothie/carrot.png",
+      price: "25.000",
+      description: "",
+    },
+    {
+      name: "Dâu",
+      engName: "Strawberry",
+      image: "smoothie/strawberry.png",
+      price: "35.000",
+      description: "",
+    },
+    {
+      name: "Dưa lưới",
+      engName: "Cantaloupe",
+      image: "smoothie/cantaloupe.png",
+      price: "25.000",
+      description: "",
+    },
+    {
+      name: "Cam",
+      engName: "Orange",
+      image: "smoothie/orange.png",
+      price: "22.000",
+      description: "",
+    },
+    {
+      name: "Xoài",
+      engName: "Mango",
+      image: "smoothie/mango.png",
+      price: "25.000",
+      description: "",
+    },
+    {
+      name: "Táo",
+      engName: "Apple",
+      image: "smoothie/apple.png",
+      price: "25.000",
+      description: "",
+    },
+    {
+      name: "Cà chua",
+      engName: "Tomato",
+      image: "smoothie/tomato.png",
+      price: "18.000",
+      description: "",
+    },
+    {
+      name: "Thơm",
+      engName: "Pineapple",
+      image: "smoothie/pineapple.png",
+      price: "25.000",
+      description: "",
+    },
+  ];
+
+  const itemsSmoothie = [
+    {
       name: "Bơ",
       engName: "Avocado",
       image: "smoothie/avocado.png",
-      price: "30.000 ",
+      price: "35.000 ",
       description: "Sinh tố bơ bổ dưỡng và mịn màng.",
     },
     {
       name: "Sapôchê",
       engName: "Sapodilla",
       image: "smoothie/sapoche.png",
-      price: "25.000 ",
+      price: "30.000 ",
       description: "Nước ép trái sapôchê tươi mát.",
     },
     {
@@ -36,14 +102,14 @@ const ScrollList = () => {
       name: "Dâu",
       engName: "Strawberry",
       image: "smoothie/strawberry.png",
-      price: "28.000 ",
+      price: "35.000 ",
       description: "Sinh tố dâu tây ngon và tươi.",
     },
     {
       name: "Dưa lưới",
       engName: "Cantaloupe",
       image: "smoothie/cantaloupe.png",
-      price: "32.000 ",
+      price: "30.000 ",
       description: "Sinh tố dưa lưới ngọt và tươi mát.",
     },
     {
@@ -64,15 +130,8 @@ const ScrollList = () => {
       name: "Mãng cầu",
       engName: "Annona",
       image: "smoothie/annona.png",
-      price: "32.000 ",
+      price: "30.000 ",
       description: "Sinh tố mãng cầu độc đáo và mịn màng.",
-    },
-    {
-      name: "Cà chua",
-      engName: "Tomato",
-      image: "smoothie/tomato.png",
-      price: "25.000 ",
-      description: "Sinh tố cà chua tươi và thơm.",
     },
     {
       name: "Mít",
@@ -85,8 +144,15 @@ const ScrollList = () => {
       name: "Dưa hấu",
       engName: "Watermelon",
       image: "smoothie/watermelon.png",
-      price: "32.000 ",
+      price: "30.000 ",
       description: "Sinh tố dưa hấu mọng nước và tươi mát.",
+    },
+    {
+      name: "Cà chua",
+      engName: "Tomato",
+      image: "smoothie/tomato.png",
+      price: "25.000 ",
+      description: "Sinh tố cà chua tươi và thơm.",
     },
   ];
 
@@ -230,7 +296,7 @@ const ScrollList = () => {
                 src="https://cdn-icons-png.freepik.com/512/6602/6602190.png"
                 alt="pie icon"
               />
-              {renderItems(itemsJuice)}
+              {renderItems(itemsSmoothie)}
             </section>
             <section>
               <h2>Juice</h2>
@@ -239,7 +305,7 @@ const ScrollList = () => {
                 src="https://cdn-icons-png.freepik.com/512/2738/2738804.png?ga=GA1.1.511715952.1707926817"
                 alt="pie icon"
               />
-              {renderItems(itemsSoda)}
+              {renderItems(itemsJuice)}
             </section>
             <section>
               <h2>Soda</h2>
