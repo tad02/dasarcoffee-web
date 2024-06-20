@@ -27,8 +27,9 @@ function ProductList() {
   };
 
   const onAdd = async (newProduct) => {
-    await handleAddProduct(newProduct);
-    fetchProducts().then((response) => setProducts(response));
+    AppUtils.handleAddProduct(newProduct).then(
+      fetchProducts().then((response) => setProducts(response))
+    );
     handleCloseModal();
   };
 
