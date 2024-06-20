@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
+import localLink from "../config";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     setError(""); // Clear previous errors
     try {
-      const response = await fetch("http://localhost:3000/api/login", {
+      const response = await fetch(`${localLink}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +29,6 @@ const Login = () => {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      console.log(data);
       if (data.token) {
         alert("Login successful!");
         localStorage.setItem("token", data.token);

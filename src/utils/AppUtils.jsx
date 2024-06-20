@@ -1,9 +1,22 @@
 import axios from "axios";
+import { useState } from "react";
 
 const AppUtils = () => {
-  const localLink = "http://localhost:3000"; // Ensure this matches your backend server URL
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzE4MTI1ODA2fQ.wm2vniquswlju7eHBtBSk6PNLjtbguRVV5P0n7jbGRk";
+  const localLink = "https://coffee-api-3kr2.vercel.app/"; // Ensure this matches your backend server URL
+  const [token, setToken] = useState(() => {
+    return localStorage.getItem("token");
+  });
+
+  const login = async (username, password) => {
+    try {
+      const response = await axios.post(`${localLink}/api/items`, {
+        username,
+        password,
+      });
+
+      return response.data;
+    } catch (e) {}
+  };
 
   const fetchProducts = async () => {
     try {
