@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import EditProduct from "./ProductEdit";
 import useAppUtils from "../utils/AppUtils"; // Import the custom hook
 import AppUtils from "../utils/AppUtils";
-import { set } from "animejs";
 
 function ProductList() {
   const [selectedItem, setSelectedItem] = useState(null);

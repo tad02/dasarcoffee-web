@@ -15,9 +15,17 @@ function Dashboard() {
         >
           <li>
             <button
+              style={{
+                color: "red",
+              }}
               onClick={() => {
-                localStorage.removeItem("token");
-                location.href = "https://www.dasarvn.com";
+                const confirmed = window.confirm(
+                  "Bạn có chắc chắn muốn đăng xuất?"
+                );
+                if (confirmed) {
+                  localStorage.removeItem("token");
+                  location.href = "https://www.dasarvn.com";
+                }
               }}
             >
               Đăng xuất

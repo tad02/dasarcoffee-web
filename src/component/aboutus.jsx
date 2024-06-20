@@ -5,7 +5,7 @@ import "./aboutus.scss";
 import aboutIcon1 from "/abouticon1.png";
 import aboutIcon2 from "/about-icon-2.png";
 import aboutIcon3 from "/about-icon-3.png";
-import aboutImg from "/aboutimg.png";
+import aboutImg from "/dasar3.jpg";
 function AboutUs() {
   const contentStyle = {
     height: "100%",
