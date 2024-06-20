@@ -40,8 +40,8 @@ function ProductList() {
   };
 
   const onDelete = async (productId) => {
-    await handleDeleteProduct(productId);
-    fetchProducts().then((response) => setProducts(response));
+    await AppUtils.handleDeleteProduct(productId);
+    AppUtils.fetchProducts().then((response) => setProducts(response));
   };
 
   return (
