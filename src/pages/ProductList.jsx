@@ -10,6 +10,9 @@ function ProductList() {
   const [addModal, setAddModal] = useState(false);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState(
+    categories.find((value) => value.name == "Coffee").id
+  );
 
   useEffect(() => {
     AppUtils.fetchCategories().then((response) => setCategories(response));
@@ -62,7 +65,6 @@ function ProductList() {
           item={selectedItem}
         />
       )}
-
       {addModal && (
         <EditProduct
           handleClose={handleCloseModal}
@@ -80,35 +82,62 @@ function ProductList() {
           >
             Thêm sản phẩm
           </button>
+          <div className="border-b border-gray-200 dark:border-gray-700">
+            <ul className="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+              {categories &&
+                categories.map((value) => (
+                  <li
+                    className="me-2 text-4xl"
+                    key={value.id}
+                    onClick={() => {
+                      setCategory(value.id);
+                    }}
+                  >
+                    <a
+                      href="#"
+                      className="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                    >
+                      <svg
+                        className="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      ></svg>
+                      {value.name}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
           <ul className="list-none p-0">
-            {products.map((product) => (
-              <li
-                key={product.id}
-                className="flex justify-between items-center bg-white p-4 mb-2 rounded shadow"
-              >
-                <span>
-                  {product.name} - {product.price} -{" "}
-                  {
-                    categories.find((value) => value.id === product.category_id)
-                      ?.name
-                  }
-                </span>
-                <div className="flex space-x-2">
-                  <button
-                    className="bg-blue-500 text-white py-1 px-3 rounded"
-                    onClick={() => handleShowModal(product)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className="bg-red-500 text-white py-1 px-3 rounded"
-                    onClick={() => onDelete(product.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </li>
-            ))}
+            {products
+              .filter((value) => value.category_id == category)
+              .map((product) => (
+                <li
+                  key={product.id}
+                  className="flex justify-between items-center bg-white p-4 mb-2 rounded shadow"
+                >
+                  <span>
+                    {product.name} - {product.price}
+                  </span>
+                  <div className="flex space-x-2">
+                    <button
+                      className="bg-blue-500 text-white py-1 px-3 rounded"
+                      onClick={() => handleShowModal(product)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="bg-red-500 text-white py-1 px-3 rounded"
+                      onClick={() => onDelete(product.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </li>
+              ))}
           </ul>
         </>
       )}
