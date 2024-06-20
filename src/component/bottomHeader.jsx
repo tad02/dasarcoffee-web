@@ -1,9 +1,10 @@
 import React from "react";
-import cupCoffee from "/cupcoffee.png"; // Adjust the path to your image
+import cupCoffee from "/cupcoffee.png";
 import "./bottomHeader.css";
 import { Carousel } from "antd";
 
 const contentStyle = {
+  fontSize: "30px",
   height: "100%",
   color: "brown",
   textAlign: "center",

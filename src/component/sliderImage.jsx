@@ -41,9 +41,9 @@ const Slideshow = () => {
         data-type="prev"
         aria-label="Previous Slide"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24">
+        {/* <svg width="24" height="24" viewBox="0 0 24 24">
           <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"></path>
-        </svg>
+        </svg> */}
       </button>
       <button
         className="nav default-nav"
@@ -51,9 +51,9 @@ const Slideshow = () => {
         data-type="next"
         aria-label="Next Slide"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24">
+        {/* <svg width="24" height="24" viewBox="0 0 24 24">
           <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
-        </svg>
+        </svg> */}
       </button>
     </div>
   );

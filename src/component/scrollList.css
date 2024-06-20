@@ -1,17 +1,18 @@
 .mainMenu {
+  margin: 50px auto auto auto;
   background-color: #8c6a5d;
   width: 100%;
   padding: 20px 0;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 3rem; /* Increase font size for better readability */
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 2.5rem; /* Increase font size */
   color: #eee4b1;
   font-weight: bold;
 }
@@ -24,14 +25,19 @@ h2 {
 
 .established {
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.5rem; /* Increase font size */
   color: #eee4b1;
 }
 
 h1,
-h2,
+h2 {
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
 p {
   text-align: center;
+  font-family: "Noto Sans Japanese", serif;
 }
 
 .menu {
@@ -51,6 +57,7 @@ hr {
   border-color: brown;
   margin: 0 auto;
 }
+
 .divider {
   display: flex;
 
@@ -91,11 +98,6 @@ hr {
   color: #6b4f4f;
 }
 
-h1,
-h2 {
-  font-family: Impact, serif;
-}
-
 .item {
   display: flex;
   justify-content: center;
@@ -103,6 +105,7 @@ h2 {
 }
 
 .item p {
+  font-size: 22px;
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -130,7 +133,7 @@ h2 {
 /* FOOTER */
 
 footer {
-  font-size: 14px;
+  font-size: 1rem; /* Increase font size */
 }
 
 .address {
@@ -154,16 +157,26 @@ a:active {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+
   .price,
   .flavor {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
     display: inline-flex;
     color: #eee4b1;
     font-weight: bold;
     margin: 0 10px;
   }
+
   .menu {
     width: 90%;
     border-radius: 10px;
+    padding: 10px;
   }
 }
