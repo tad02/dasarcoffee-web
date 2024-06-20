@@ -10,9 +10,7 @@ function ProductList() {
   const [addModal, setAddModal] = useState(false);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState(
-    categories.find((value) => value.name == "Coffee").id || 1
-  );
+  const [category, setCategory] = useState(1);
 
   useEffect(() => {
     AppUtils.fetchCategories().then((response) => setCategories(response));
