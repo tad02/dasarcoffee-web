@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-const localLink = "https://coffee-api-3kr2.vercel.app/";
+const localLink = "https://coffee-api-3kr2.vercel.app";
 
 function AppUtils() {
   const token = localStorage.getItem("token") || null;
