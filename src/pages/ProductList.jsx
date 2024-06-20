@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EditProduct from "./ProductEdit";
 import useAppUtils from "../utils/AppUtils"; // Import the custom hook
+import AppUtils from "../utils/AppUtils";
 
 function ProductList() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -8,17 +9,10 @@ function ProductList() {
   const [addModal, setAddModal] = useState(false);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const {
-    fetchProducts,
-    fetchCategories,
-    handleAddProduct,
-    handleUpdateProduct,
-    handleDeleteProduct,
-  } = useAppUtils(); // Use the custom hook
 
   useEffect(() => {
-    fetchCategories().then((response) => setCategories(response));
-    fetchProducts().then((response) => setProducts(response));
+    AppUtils.fetchCategories().then((response) => setCategories(response));
+    AppUtils.fetchProducts().then((response) => setProducts(response));
   }, []);
 
   const handleShowModal = (product) => {
