@@ -13,6 +13,17 @@ function Dashboard() {
           }}
           className={`md:flex md:space-x-4 d-flex`}
         >
+          <li>
+            <button
+              onClick={() => {
+                localStorage.removeItem("token");
+                location.href = "https://www.dasarvn.com";
+              }}
+            >
+              Đăng xuất
+            </button>
+          </li>
+
           <li className="mt-2 md:mt-0">
             <Link
               to="categories"
