@@ -14,10 +14,10 @@ const ScrollList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseItems = await AppUtils.fetchProducts();
-        const responseCategories = await AppUtils.fetchCategories();
-        setItems(responseItems || []); // Ensure items is an array
-        setCategories(responseCategories || []); // Ensure categories is an array
+        const responseItems = await AppUtils().fetchProducts();
+        const responseCategories = await AppUtils().fetchCategories();
+        setItems(responseItems || []); 
+        setCategories(responseCategories || []); 
       } catch (error) {
         console.error("Error fetching data:", error);
         setItems([]); // Set empty array on error

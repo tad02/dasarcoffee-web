@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const localLink = "https://coffee-api-3kr2.vercel.app/";
 
-const AppUtils = () => {
+function AppUtils() {
   const [token, setToken] = useState(() => {
     return localStorage.getItem("token") || null;
   });
@@ -208,6 +208,6 @@ const AppUtils = () => {
     handleUpdateOrder,
     handleDeleteOrder,
   };
-};
+}
 
-export default AppUtils;
+export default AppUtils();
