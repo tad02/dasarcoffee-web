@@ -11,7 +11,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(
-    categories.find((value) => value.name == "Coffee").id
+    categories.find((value) => value.name == "Coffee").id || 1
   );
 
   useEffect(() => {
