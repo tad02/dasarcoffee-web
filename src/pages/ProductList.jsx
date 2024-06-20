@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import EditProduct from "./ProductEdit";
 import useAppUtils from "../utils/AppUtils"; // Import the custom hook
 import AppUtils from "../utils/AppUtils";
+import { set } from "animejs";
 
 function ProductList() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -27,16 +28,23 @@ function ProductList() {
   };
 
   const onAdd = async (newProduct) => {
-    AppUtils.handleAddProduct(newProduct).then(
-      AppUtils.fetchProducts().then((response) => setProducts(response))
-    );
+    await AppUtils.handleAddProduct(newProduct);
+    const newProducts = [...products, newProduct];
+    setProducts(newProducts);
     handleCloseModal();
   };
 
   const onUpdate = async (updatedProduct) => {
-    AppUtils.handleUpdateProduct(updatedProduct);
-    AppUtils.fetchProducts().then((response) => setProducts(response));
-    handleCloseModal();
+    try {
+      await AppUtils.handleUpdateProduct(updatedProduct);
+      const newProducts = products.map((product) =>
+        product.id !== updatedProduct.id ? product : updatedProduct
+      );
+      setProducts(newProducts);
+      handleCloseModal();
+    } catch (error) {
+      console.error("Error updating product:", error);
+    }
   };
 
   const onDelete = async (productId) => {
