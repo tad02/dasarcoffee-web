@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EditProduct from "./ProductEdit";
-import { Button } from "@material-tailwind/react";
-import AppUtils from "../utils/AppUtils";
+import useAppUtils from "../utils/AppUtils"; // Import the custom hook
 
 function ProductList() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -9,21 +8,18 @@ function ProductList() {
   const [addModal, setAddModal] = useState(false);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const {
+    fetchProducts,
+    fetchCategories,
+    handleAddProduct,
+    handleUpdateProduct,
+    handleDeleteProduct,
+  } = useAppUtils(); // Use the custom hook
 
   useEffect(() => {
-    fetchCategories();
-    fetchProducts();
+    fetchCategories().then((response) => setCategories(response));
+    fetchProducts().then((response) => setProducts(response));
   }, []);
-
-  const fetchProducts = async () => {
-    const response = await AppUtils.fetchProducts();
-    setProducts(response);
-  };
-
-  const fetchCategories = async () => {
-    const response = await AppUtils.fetchCategories();
-    setCategories(response);
-  };
 
   const handleShowModal = (product) => {
     setSelectedItem(product);
@@ -37,21 +33,20 @@ function ProductList() {
   };
 
   const onAdd = async (newProduct) => {
-    await AppUtils.handleAddProduct(newProduct);
-    fetchProducts();
+    await handleAddProduct(newProduct);
+    fetchProducts().then((response) => setProducts(response));
     handleCloseModal();
   };
 
   const onUpdate = async (updatedProduct) => {
-    console.log(updatedProduct);
-    await AppUtils.handleUpdateProduct(updatedProduct);
-    fetchProducts();
+    await handleUpdateProduct(updatedProduct);
+    fetchProducts().then((response) => setProducts(response));
     handleCloseModal();
   };
 
   const onDelete = async (productId) => {
-    await AppUtils.handleDeleteProduct(productId);
-    fetchProducts();
+    await handleDeleteProduct(productId);
+    fetchProducts().then((response) => setProducts(response));
   };
 
   return (

@@ -1,11 +1,31 @@
 import axios from "axios";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+const localLink = "https://coffee-api-3kr2.vercel.app/";
 
 const AppUtils = () => {
-  const localLink = "https://coffee-api-3kr2.vercel.app/"; // Ensure this matches your backend server URL
   const [token, setToken] = useState(() => {
-    return localStorage.getItem("token");
+    return localStorage.getItem("token") || null;
   });
+
+  useEffect(() => {
+    if (token) {
+      axios
+        .get(`${localLink}/user/profile`, {
+          headers: {
+            Authorization: `${token}`,
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          // Handle response data as needed
+        })
+        .catch((error) => {
+          console.error("Error fetching user profile:", error);
+          // Handle errors if necessary
+        });
+    }
+  }, [token]);
 
   const login = async (username, password) => {
     try {
@@ -190,4 +210,4 @@ const AppUtils = () => {
   };
 };
 
-export default AppUtils();
+export default AppUtils;

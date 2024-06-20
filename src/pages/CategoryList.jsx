@@ -9,7 +9,7 @@ function CategoryList() {
   const [categories, setCategories] = useState([]);
 
   const getCategories = async () => {
-    const response = await AppUtils.fetchCategories();
+    const response = await AppUtils().fetchCategories();
     setCategories(response);
   };
 
