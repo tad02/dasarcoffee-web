@@ -28,14 +28,14 @@ function ProductList() {
 
   const onAdd = async (newProduct) => {
     AppUtils.handleAddProduct(newProduct).then(
-      fetchProducts().then((response) => setProducts(response))
+      AppUtils.fetchProducts().then((response) => setProducts(response))
     );
     handleCloseModal();
   };
 
   const onUpdate = async (updatedProduct) => {
-    await handleUpdateProduct(updatedProduct);
-    fetchProducts().then((response) => setProducts(response));
+    AppUtils.handleUpdateProduct(updatedProduct);
+    AppUtils.fetchProducts().then((response) => setProducts(response));
     handleCloseModal();
   };
 
