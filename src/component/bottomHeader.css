@@ -17,8 +17,8 @@
   color: #483434;
   font-size: 24px;
   text-align: justify;
-  max-width: 50vw;
-  margin: 20px;
+  max-width: 80vw;
+  margin: 20px 0px;
 }
 
 @media (min-width: 901px) {
@@ -32,7 +32,6 @@
 
   .bottom-header-text {
     font-size: 24px; /* Adjust font size for larger screens */
-    margin-left: 20px; /* Add left margin for spacing */
   }
 }
 

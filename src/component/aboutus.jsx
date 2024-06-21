@@ -10,10 +10,10 @@ function AboutUs() {
   const contentStyle = {
     height: "100%",
     color: "brown",
-    textAlign: "center",
+    textAlign: "justify",
     background: "transparent",
     padding: "10px 0",
-    fontSize: "30px",
+    fontSize: "25px",
   };
   const daSarCoffeeDescriptions = [
     {
